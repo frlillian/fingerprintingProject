@@ -53,7 +53,7 @@ export const homePageMeta: HomepageMeta = {
  */
 export const SectionId = {
   Hero: 'hero',
-  About: 'about',
+  About: 'Smudg Report',
   Contact: 'contact',
   Portfolio: 'portfolio',
   Resume: 'resume',
@@ -69,18 +69,23 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `Fingerprinting Sucks`,
+  name: `Fingersmudging`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        Fingerprinting is dumb and bad.
+        Fingerprinting is the problem. We're the solution.
       </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      {/* <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         ikr!
-      </p>
+      </p> */}
     </>
   ),
   actions: [
+    {
+      href: `#${SectionId.About}`,
+      text: 'Smudge',
+      primary: true,
+    },
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -94,9 +99,12 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `OWO fingerprinting facts. OOO wow.`,
+  description: `Your fingerprint looks a bit like this to us.`,
    aboutItems: [
-  //   {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
+    {label: 'Overall', text: 'You are not well protected', Icon: FlagIcon},
+    {label: 'Fonts', text: 'Comic sans, ', Icon: FlagIcon},
+    {label: 'Canvas', text: '3tjua8a4rp9r90igru', Icon: FlagIcon},
+    {label: 'Versions', text: 'JS: 4.25, Flash: 5.31, ', Icon: FlagIcon},
   //   {label: 'Age', text: '29', Icon: CalendarIcon},
   //   {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
   //   {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
@@ -324,27 +332,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Talk to us about security!',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'flillian@uw.edu',
+      href: 'mailto:flillian@uw.edu',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'Seattle, Washington',
+      href: 'https://www.google.com/maps/place/University+of+Washington/@47.6553358,-122.3364812,14z/data=!4m9!1m2!2m1!1suw+address!3m5!1s0x549014929d8535eb:0x6b742c7901b82ba3!8m2!3d47.6553351!4d-122.3035199!15sCgp1dyBhZGRyZXNzIgJIAVoEIgJ1d5IBCnVuaXZlcnNpdHmaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTnRkbDh0VkRkQlJSQULgAQA',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'fingerprintingProject',
+      href: 'https://github.com/frlillian/fingerprintingProject',
     },
   ],
 };
@@ -353,9 +356,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  // {label: 'Github', Icon: GithubIcon, href: 'https://github.com/frlillian/fingerprintingProject'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  // {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
+  // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
+  // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
